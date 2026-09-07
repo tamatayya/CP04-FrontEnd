@@ -21,79 +21,95 @@ section {
     min-height: 100vh;
 }
 
-/* header{
- 
-} */
-
-
 .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 100px;
+    padding: 0 300px;
     z-index: 10;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100px;
+
+    backdrop-filter: blur(10px);
+
 }
 
 #opcoes {
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
-a {
+.opcao {
     text-transform: capitalize;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
     font-family: var(--fonte);
+    color: var(--off-white);
+    font-size: 16px;
 }
 
-#destaque {
+#logo {
+    display: flex;
+    align-items: center;
+
+    span {
+        color: rgb(160, 160, 160);
+        margin-left: 5px;
+    }
+}
+#destaque{
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 22px;
 }
 
-.grecia-1 {
-    grid-area: 'a';
+.hero {
+    .principal-1 { grid-area: a; }
+    .principal-2 { grid-area: b; }
+    .principal-3 { grid-area: c; }
+    .principal-4 { grid-area: d; }
+    .galeria__texto { grid-area: e; }
+
+    .principal-conteudo {
+        margin: 0 auto;
+        background-color: var(--preto);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 450px 300px;
+        padding: 120px 240px 70px;
+        gap: 30px;
+        grid-template-areas:
+        "a a a a"
+        "e b c d";  
+    }
+
+    img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+    }
+
+    p {
+        font-size: 17px;
+        color: var(--off-white);
+        font-family: var(--fonte);
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+
+    .button {
+        text-decoration: none;
+        font-family: var(--fonte);
+        font-weight: 600;
+        color: var(--preto);
+        padding: 20px 40px;
+        background-color: var(--button);
+        border-radius: 30px; 
+    }
 }
-
-.grecia-2 {
-    grid-area: 'b';
-}
-
-.grecia-3 {
-    grid-area: 'c';
-}
-
-.grecia-4 {
-    grid-area: 'd';
-}
-
-#caixa-texto {
-    grid-area: 'e';
-}
-
-#conteudo {
-    max-width: 1140px;
-    display: grid;
-    background-color: var(--preto);
-
-    /* padding: 70px auto; */
-    grid-template-areas:
-        'a a a a'
-        'e c d b';
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 7px;
-}
-
-/* #caixa-texto{
-    height: ;
-} */
 
 
 
