@@ -29,29 +29,48 @@ section {
 .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 100px;
+    padding: 0 300px;
     z-index: 10;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100px;
+
+    backdrop-filter: blur(10px);
+
 }
 
 #opcoes {
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
 a {
     text-transform: capitalize;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
     font-family: var(--fonte);
+    color: var(--off-white);
+    font-size: 16px;
 }
 
-#destaque {
+#logo {
+    display: flex;
+    align-items: center;
+
+    span {
+        color: rgb(160, 160, 160);
+        margin-left: 5px;
+    }
+}
+#destaque{
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 22px;
 }
+
+
 
 .grecia-1 {
     grid-area: 'a';
